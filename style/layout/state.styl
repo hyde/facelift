@@ -1,0 +1,20 @@
+
+// hidden
+#nav_account, #nav_login
+   display none
+
+// opacity 0
+#main
+   opacity 0
+   transition opacity .5s
+
+.is-loaded
+   #main
+      opacity 1
+
+.is-logged &
+   #nav_account, #nav_logout
+      display inline
+
+   #nav_login
+      display none

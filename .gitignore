@@ -1,0 +1,7 @@
+.DS_Store
+.hyde_deps
+*.pyc
+node_modules
+deploy
+.tm_properties
+*.s3

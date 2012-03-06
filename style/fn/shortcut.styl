@@ -1,0 +1,116 @@
+
+/*
+   shadow 20px
+   shadow 20px .3
+   shadow 20px #c
+*/
+shadow(size = 10px, color = #0, alpha = 0.25)
+   if color is a 'unit'
+      box-shadow 0 0 size rgba(#0, color)
+   else
+      box-shadow 0 0 size rgba(color, alpha)
+
+
+/*
+   bg #f                bg #f
+   bg 1*u 10*u          bg 1*u 10*u
+   bg 'foo.jpg'         background url('foo.jpg') 0 0 no-repeat
+   bg #c 'foo.jpg'      background #ccc url('foo.jpg') 0 0 no-repeat
+   bg #c 'foo.jpg' 0 1  background: #ccc url("foo.jpg") 0 1
+*/
+bg(arg, rest...)
+
+   len = length(rest)
+
+   if arg is a 'unit'
+      background-position arg rest
+
+   else if arg is a 'string'
+      if len == 1
+         background url(arg) 0 0 no-repeat
+      else
+         background url(arg) rest
+
+   else if arg is a 'rgba'
+      if len == 1
+         background arg url(rest) 0 0 no-repeat
+      else if len > 1
+         url = rest[0]
+         background arg url(url) rest[1] rest[2] rest[3]
+      else
+         background-color arg
+
+/*
+   font 24*u
+   font 45*u/1em center -2 300
+   font 10*u/3*u bold italic #d underline right
+*/
+font()
+
+   for arg, i in arguments
+
+      if arg < 0
+         letter-spacing arg
+      else if arg >= 300
+         font-weight arg
+      else if arg is a 'unit' and i == 0
+         font-size arg
+      else if arg is a 'unit' and i > 0
+         line-height arg
+      else if arg is a 'rgba'
+         color arg
+      else if arg is 'bold' or arg is 'normal'
+         font-weight arg
+      else if arg is 'underline'
+         text-decoration arg
+      else if arg is 'italic'
+         font-style arg
+      else if arg is a 'ident'
+         text-align arg
+
+/*
+   Thanks: https://github.com/visionmedia/nib
+
+   absolute 1*u         position absolute; top 1*u
+   relative 2*u 4*u     position relative; top 1*u; left 4*u
+*/
+
+-pos(type, args)
+   position unquote(type)
+   top args[0]
+
+   if length(args) > 1
+      left args[1]
+
+fixed()
+   -pos('fixed', arguments)
+
+absolute()
+   -pos('absolute', arguments)
+
+relative()
+   -pos('relative', arguments)
+
+
+
+hover(color = blue)
+   color color
+   transition color fast
+
+   &:hover
+      color lighten(color, 10)
+
+   &:active
+      color darken(color, 10)
+
+hover-bg(color = blue)
+   bg color
+   transition background-color fast
+
+   &:hover
+      bg lighten(color, 2)
+
+   &:active
+      bg darken(color, 2)
+
+

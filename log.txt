@@ -1,0 +1,126 @@
+[0m 08:54:01 [1m[1;37mhyde.engine[0m Reading site configuration from [/Users/tipiirai/git/moot/template/site.yaml][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Loading module [hyde.ext.plugins.meta][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Getting object [MetaPlugin] from module [hyde.ext.plugins.meta][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Loading module [hyde.ext.plugins.auto_extend][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Getting object [AutoExtendPlugin] from module [hyde.ext.plugins.auto_extend][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Loading module [hyde.ext.plugins.blockdown][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Getting object [BlockdownPlugin] from module [hyde.ext.plugins.blockdown][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Loading module [hyde.ext.plugins.syntext][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Getting object [SyntextPlugin] from module [hyde.ext.plugins.syntext][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Loading module [hyde.ext.plugins.textlinks][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Getting object [TextlinksPlugin] from module [hyde.ext.plugins.textlinks][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Loading module [hyde.ext.plugins.combine][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Getting object [CombinePlugin] from module [hyde.ext.plugins.combine][0m
+[0m 08:54:01 [1m[1;37mhyde[0m Regenerating the site...[0m
+[0m 08:54:01 [1m[1;37mhyde.engine[0m Reading site contents[0m
+[0m 08:54:01 [1m[1;37mhyde.engine[0m Generating site at [/Users/tipiirai/git/moot/template][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Using [Jinja2Template] as the template[0m
+[0m 08:54:01 [1m[1;37mhyde.engine[0m Configuring the template environment[0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Begin Generation[0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Node exists at [][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [index.html] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added node [media] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/meta.yaml] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added node [media/js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/js/bottom.js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/js/top.js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added node [media/js/lib] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/js/lib/jquery.min.js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/js/lib/modernizr.min.js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/js/lib/storage.js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added node [media/js/tools] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/js/tools/inlay.js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/js/tools/label.js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/js/tools/overlay.js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Added resource [media/js/tools/validator.js] to [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/index.html][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/index.html][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/meta.yaml][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/meta.yaml][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/meta.yaml][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/bottom.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/bottom.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/top.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/top.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/jquery.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/lib/jquery.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/jquery.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/modernizr.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/lib/modernizr.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/modernizr.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/storage.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/lib/storage.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/storage.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/inlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/tools/inlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/inlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/label.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/tools/label.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/label.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/overlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/tools/overlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/overlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/validator.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/tools/validator.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/validator.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.CombinePlugin[0m No resources to combine for [/Users/tipiirai/git/moot/template/content/media/js/bottom.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.CombinePlugin[0m No resources to combine for [/Users/tipiirai/git/moot/template/content/media/js/top.js][0m
+[0m 08:54:01 [1m[1;37mhyde.engine[0m Generating site to [/Users/tipiirai/git/moot/template/deploy][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Generating Node [/Users/tipiirai/git/moot/template/content][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/index.html][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.Jinja2[0m Loading template [index.html] and preprocessing[0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/index.html][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/index.html][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.AutoExtendPlugin[0m Autoextending index.html with site.j2[0m
+[0m 08:54:01 [1m[1;34mhyde.engine.Jinja2[0m Loading template [site.j2] and preprocessing[0m
+[0m 08:54:01 [1m[1;34mhyde.engine.Jinja2[0m Loading template [root.j2] and preprocessing[0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Rendering [/Users/tipiirai/git/moot/template/content/index.html][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.Jinja2[0m Loading template [index.html] and preprocessing[0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/index.html][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/index.html][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.AutoExtendPlugin[0m Autoextending index.html with site.j2[0m
+[0m 08:54:01 [1m[1;34mhyde.engine.Jinja2[0m Loading template [site.j2] and preprocessing[0m
+[0m 08:54:01 [1m[1;34mhyde.engine.Jinja2[0m Loading template [root.j2] and preprocessing[0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Generating Node [/Users/tipiirai/git/moot/template/content/media][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Skipping [/Users/tipiirai/git/moot/template/content/media/meta.yaml][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Generating Node [/Users/tipiirai/git/moot/template/content/media/js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/media/js/bottom.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/bottom.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/bottom.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.CombinePlugin[0m No resources to combine for [/Users/tipiirai/git/moot/template/content/media/js/bottom.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/media/js/top.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/top.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/top.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.CombinePlugin[0m No resources to combine for [/Users/tipiirai/git/moot/template/content/media/js/top.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Generating Node [/Users/tipiirai/git/moot/template/content/media/js/lib][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/media/js/lib/jquery.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/jquery.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/lib/jquery.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/jquery.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/media/js/lib/modernizr.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/modernizr.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/lib/modernizr.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/modernizr.min.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/media/js/lib/storage.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/storage.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/lib/storage.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/lib/storage.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Generating Node [/Users/tipiirai/git/moot/template/content/media/js/tools][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/media/js/tools/inlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/inlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/tools/inlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/inlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/media/js/tools/label.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/label.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/tools/label.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/label.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/media/js/tools/overlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/overlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/tools/overlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/overlay.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Processing [/Users/tipiirai/git/moot/template/content/media/js/tools/validator.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Trying to load metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/validator.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m No metadata found in resource [/Users/tipiirai/git/moot/template/content/media/js/tools/validator.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine.MetaPlugin[0m Successfully loaded metadata from resource [/Users/tipiirai/git/moot/template/content/media/js/tools/validator.js][0m
+[0m 08:54:01 [1m[1;34mhyde.engine[0m Generation Complete[0m
+[0m 08:54:01 [1m[1;37mhyde[0m Generation complete.[0m

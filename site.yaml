@@ -1,0 +1,40 @@
+
+meta:
+    extends: site.j2
+    default_block: content
+
+    title: Project Name
+    description: Project description
+    keywords: comma, separated list, of keywords
+    author: Your Name
+
+    body_id: body
+    body_class: body
+    nodemeta: meta.yaml
+    charset: utf-8
+
+media_url: /media
+media_root: media
+deploy_root: deploy
+template: hyde.ext.jinja2
+analytics:
+
+# plugins
+plugins:
+   - hyde.ext.plugins.meta.MetaPlugin
+   - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+   - hyde.ext.plugins.blockdown.BlockdownPlugin
+   - hyde.ext.plugins.syntext.SyntextPlugin
+   - hyde.ext.plugins.textlinks.TextlinksPlugin
+   - hyde.ext.plugins.combine.CombinePlugin
+
+markdown:
+   extensions:
+       - passthrough
+       - def_list
+       - headerid
+       - sections
+
+blockdown:
+    open_pattern: ^---+\s*([A-Za-z0-9_\-\.]+)\s*$
+    close_pattern: ^\.$

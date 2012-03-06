@@ -1,0 +1,63 @@
+
+html, body
+   height 100%
+   bg color_bg
+
+
+// font
+html, button, input, select, textarea
+   font-family font_family
+   font font_size #3
+
+#container
+   min-height 100%
+   position relative
+
+#main_content
+   position relative
+   clearfix()
+
+#content
+   padding-bottom 6em
+
+// centered
+#top_content, #header_content, #hero_content, #main_content, #footer_content
+   max-width page_width
+   margin 0 auto
+
+#main_content
+   padding 0 u2
+   max-width page_width - u4
+
+// header
+#header
+   clearfix()
+
+// hero
+#hero
+   display none
+   bg #345
+   font 4em #e center
+   padding uh 0
+
+   .hero &
+      display block
+
+// footer
+#footer
+   position absolute
+   bottom 0
+   width 100%
+
+
+@media (min-width: 480px)
+   .columned #content
+
+      .level1
+         margin-bottom 30px
+         clearfix()
+
+      .level2
+         float left
+         width 46%
+         padding-right 4%

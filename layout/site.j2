@@ -1,0 +1,38 @@
+
+{% extends "root.j2" -%}
+
+{% block ie6 -%}
+   Your browser is old. Please <a href="http://browsehappy.com/">upgrade to a modern one</a>
+{%- endblock %}
+
+{% block hero -%}
+   <h1>MEGA</h1>
+{%- endblock %}
+
+
+{% block nav -%}
+   <a id="nav_home"     href="/"          title="Home">Home</a>
+   <a id="nav_demos"    href="/demos/"    title="Demos">Demos</a>
+   <a id="nav_docs"     href="/docs/"     title="Documentation">Docs</a>
+   <a id="nav_download" href="/download/" title="Download or buy">Get v5.0.0</a>
+   <a id="nav_forum"    href="/forum/"    title="Public community">Forum</a>
+   <a id="nav_support"  href="/support/"  title="Personal support">Support</a>
+
+   <aside>
+      <a id="nav_account" href="/account/" title="Your account">Account</a>
+      <a id="nav_login" href="/login/" title="Logon to Flowplayer">Login</a>
+      <a id="nav_logout" href="/logout/" title="Logout">Logout</a>
+   </aside>
+{%- endblock %}
+
+{% block aside %}
+   <a href="http://jquerytools.org">jQuery Tools</a>
+   <a href="http://flash.flowplayer.org">v3.2.8</a>
+   <a href="http://github.com/flowplayer">Github</a>
+   <a href="http://github.com/flowplayer/player/issues">Report a bug</a>
+{%- endblock %}
+
+{% block footer %}
+   <h3>Less but better. <a href="/about/">More about us.</a></h3>
+{%- endblock %}
+
