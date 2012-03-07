@@ -1,0 +1,16 @@
+
+activated(speed = slow)
+   opacity 0
+   transition opacity speed
+   absolute -9999em -9999em
+
+   &.is-active
+      opacity 1
+      z-index 10
+      left 0
+      top 0
+
+box(bg-color)
+   bg bg-color
+   padding u u2
+   shadow u
