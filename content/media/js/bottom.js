@@ -8,6 +8,10 @@ combine:
    files:
       - inlay.js
       - overlay.js
+      - select.js
+      - selectinput.js
+      - label.js
+      - validator.js
 ---
 
 $(function(){
