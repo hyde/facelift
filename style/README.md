@@ -28,11 +28,12 @@ header_font = garamond
 body_font   = sans-serif
 
 // 4. page types; smaller file size
-page_types = 'news', 'product', ''
+page_types = blog tour columned
+
 
 // 5. fine tune
 spacing        = 14px
-button_style   = striped
+button_style   = gradient striped
 overlay_style  = striped
 form_style     = bold
 

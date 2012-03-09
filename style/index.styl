@@ -14,14 +14,23 @@
 
 }
 
+
+// variables
 @import "vars"
+@import "theme/" + theme + "/vars"
+
+// functions
 @import "fn"
 
+// base
 @import "base/fix"
 @import "base/normalize"
 
+// layout
 @import "layout"
+
+// modules
 @import "module"
 
-// base theme
-@import "theme/minimalist"
+// theme
+@import "theme/" + theme
