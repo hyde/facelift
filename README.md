@@ -1,21 +1,39 @@
 
-Hyde template framework. Work in progress.
+Hyde template framework. WIP
 
-1. Multiple looks
-   * sample looks: bootstrap.io, apple.com, about.me, wordpress blog
-   * sample pages: home, blog, tour, news, product, forum
+Framework should not bother user with low level choices
 
-2. Designed for content editing
-   * Markdown optimized
+moot/style.styl
+===============
 
-3. 80% Smaller than others
-   * Less to learn
-   * Easier to maintain / extend
-   * Less bugs
+// 1. color palette; set of swatches
+colors = darksky
 
-4. Tech
-   * smacss.com organized
-   * stylus essentials: CSS3 & shortcuts
-   * fix / normalize.css
-   * responsive
-   * jQuery Tools 2.0
+// 2. theme; set of module styles
+theme = minimalist
+
+// 3. typography; custom fonts allowed
+header_font = garamond
+body_font   = sans-serif
+
+// 4. page types; smaller file size
+page_types = 'news', 'product', ''
+
+// 5. fine tune
+spacing        = 14px
+button_style   = striped
+overlay_style  = striped
+form_style     = bold
+
+@import "template"
+@import "moot"
+
+# installation
+site.yaml:
+   stylus -I template/style
+
+# the root of all good
+cp template/layout/root.j2 layout
+
+# optionally
+cp -r template/content/media/js content/media

@@ -1,33 +1,18 @@
 
-table.listing
+/*
+   - zebra tables stress the eye
+   - borders on every edge is clutter, lining is more lightweight
+   - if using zebras try color altering in 5 row stacks
+   - data is more important than header; make it visually so
+*/
+#content table
    width 100%
-   margin 25px 0
+   margin u3 0
 
    td
-      padding 5px 0
+      padding u 0
       border-bottom 1px solid #e
 
-   &.conf
-      .col1, .col2
-         width 15%
-         white-space nowrap
-         padding-right 10px
-         font-family monaco, 'courier new'
-         font-size 14px
-
-      .col2
-         text-transform lowercase
-
-
-   &.list
-      .col1
-         white-space nowrap
-         padding-right 25px
-         font-family monaco, 'courier new'
-         font-size 14px
-
-   .r1 td
-      font-weight bold
-      border-bottom 1px solid #9
-      font-family inherit
-      font-size inherit
+   th
+      border-bottom 1px solid #c
+      font smaller normal #7

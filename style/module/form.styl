@@ -1,0 +1,48 @@
+/*
+   - error colors should be subtle / iconic
+   - red color for error works but can be naive
+   - input nested inside label gets focused with a click
+   - select = custom skin
+   - no support for input type="button", input type="image"
+   - fieldset can add structure
+*/
+
+button, input, select, textarea
+   font-size 95%
+
+fieldset
+   border 0
+
+legend
+   font-size large
+
+label
+   margin 1em 0
+   display block
+   cursor pointer
+
+textarea
+   resize none
+
+input[type="radio"], input[type="checkbox"]
+  display inline-block
+  margin-right uh
+
+input, textarea
+   border 1px solid #d
+   border-radius uh
+   padding uh
+   box-shadow inset 0 0 1px rgba(#0, .1)
+   transition all fast
+   bg #f
+
+   &:focus
+      border-color rgba(#75b9f0,.8)
+      box-shadow inset 0 0 1px rgba(#0, .1), 0 0 8px rgba(#75b9f0,.6)
+      outline 0
+
+   &[disabled], &[readonly]
+      background-color #f5
+      cursor not-allowed
+      border-color #d
+      box-shadow none

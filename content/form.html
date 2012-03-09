@@ -1,9 +1,3 @@
----
-default_block: html
----
-
-<h1>Form</h1>
-
 <form>
 
    <label><input placeholder="username"/></input></label>
@@ -17,34 +11,13 @@ default_block: html
    <label><select><option>this is option</option><option>1</option><option>2</option></select></label>
 
    <fieldset>
-      <label><input type="radio" name="a" checked/> this is radio</label>
+      <label><input type="radio" name="a"/> this is radio</label>
       <label><input type="radio" name="a"/> this is radio</label>
       <label><input type="radio" name="a"/> this is radio</label>
    </fieldset>
 
    <p>
-      <button type="submit">Join</button>
-      <button disabled>cancel</button>
+      <button disabled type="submit">Join</button> or <a class="cancel">cancel</a>
    </p>
 
 </form>
-
-
-<hr>
-
-<div class="tip is-below is-active" style="top: 50px; right: 0; left: auto">
-   <h3 class="tip-title">Tooltip title</h3>
-   <p>This is the content asdf lkasdjf lsadkjf lkj </h3>
-</div>
-
-<div class="bubble is-active" style="top: 190px; right: 0; left: auto">
-   <h3 class="tip-title">Tooltip title</h3>
-   <p>This is the content asdf lkasdjf lsadkjf lkj </h3>
-</div>
-
-<div class="overlay -is-active">
-   <div>
-      <h3 class="tip-title">Tooltip title</h3>
-      <p>This is the content asdf lkasdjf lsadkjf lkj </h3>
-   </div>
-</div>
