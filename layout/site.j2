@@ -1,6 +1,11 @@
 
 {% extends "root.j2" -%}
 
+{% block style -%}
+   <link rel="stylesheet" type="text/css" href="/media/css/index.css"/>
+{%- endblock %}
+
+
 {% block ie6 -%}
    Your browser is old. Please <a href="http://browsehappy.com/">upgrade to a modern one</a>
 {%- endblock %}
@@ -8,7 +13,6 @@
 {% block hero -%}
    <h1>MEGA</h1>
 {%- endblock %}
-
 
 {% block nav -%}
    <a id="nav_home"     href="/">Home</a>
