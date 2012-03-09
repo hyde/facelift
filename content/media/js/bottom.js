@@ -16,4 +16,6 @@ combine:
 
 $(function(){
    $("html").addClass('is-loaded');
+
+   $("select").selectinput();
 });

@@ -1,0 +1,62 @@
+
+/*
+   <div class="select is-active">
+      <div class="value">this is option</div>
+      <ul>
+         <li class="selected">this is option</li>
+         <li>1</li>
+         <li>2</li>
+      </ul>
+      <input/>
+   </div>
+*/
+.select
+   position relative
+
+   input
+      display none
+
+   .value
+      cursor pointer
+
+      &:after
+         content '5'
+         font-family moot
+         font-size 7px
+         relative -2px 5px
+
+   ul
+      box #f
+      border-radius 3px
+      margin 0
+      padding 0
+      width 200px
+      absolute -999em 0
+      opacity 0
+      transition opacity fast
+
+      .is-active&
+         absolute - u2 0
+         opacity 1
+
+   li
+      list-style-type none
+      padding u
+      margin 0
+
+      &:hover
+         bg #e
+         cursor pointer
+
+      &.is-selected
+         background-color #3
+         cursor default
+         color #f
+
+         &:after
+            content 'c'
+            font-family moot
+            float right
+
+
+
