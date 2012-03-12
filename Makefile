@@ -1,10 +1,12 @@
 
-# work on a single skin (watches changes and processes on the background)
+style:
+	stylus -c -o hyde/deploy/media/css -w style
+
 skin:
-	stylus -c -o hyde/deploy/media/css -w style/skin/$(MAKECMDGOALS)/index.styl
+	stylus -c -o hyde/deploy/media/css -w style/$(MAKECMDGOALS)
 
 minimalist: skin
 functional: skin
 playful: skin
 
-.PHONY: style
+.PHONY: style skin

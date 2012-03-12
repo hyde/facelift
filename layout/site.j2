@@ -19,15 +19,15 @@
    <a id="nav_tour"     href="/tour.html">Tour</a>
    <a id="nav_page"     href="/content.html">Content</a>
    <a id="nav_module"   href="/modules.html">Modules</a>
+{% endblock %}
 
-   <aside>
-      <a id="nav_account" href="/account/" title="Your account">Account</a>
-      <a id="nav_login" href="/login/" title="Logon to Flowplayer">Login</a>
-      <a id="nav_logout" href="/logout/" title="Logout">Logout</a>
-   </aside>
-{%- endblock %}
+{% block subnav %}
+   <a id="nav_account" href="/account/" title="Your account">Account</a>
+   <a id="nav_login" href="/login/" title="Logon to Flowplayer">Login</a>
+   <a id="nav_logout" href="/logout/" title="Logout">Logout</a>
+{% endblock %}
 
-{% block aside %}
+{% block secondary %}
    <a href="http://jquerytools.org">jQuery Tools</a>
    <a href="http://flash.flowplayer.org">v3.2.8</a>
    <a href="http://github.com/flowplayer">Github</a>

@@ -1,13 +1,4 @@
 
-// font based icons
-@font-face
-   font-family 'moot'
-   src url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.eot')
-   src url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.woff') format('woff'), url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.ttf') format('truetype'), url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.svg#MootRegular') format('svg')
-   font-weight normal
-   font-style normal
-
-
 html, body
    height 100%
    bg bg_color
@@ -22,32 +13,23 @@ html
    min-height 100%
    position relative
 
-#main_content
+
+// fade effect
+#main
+   opacity 0
+   transition opacity .5s
+
+.is-loaded
+   #main
+      opacity 1
+
+
+#main-inner
    position relative
    clearfix()
 
-// centered
-#top_content, #header_content, #hero_content, #main_content, #footer_content
+// inner elements
+#header-inner, #hero-inner, #main-inner, #footer-inner
    max-width page_width - page_margin
    margin 0 auto
    padding 0 page_margin
-
-// header
-#header
-   clearfix()
-
-// hero
-#hero
-   display none
-   bg #345
-   font 4em #e center
-   padding uh 0
-
-   .hero &
-      display block
-
-// footer
-#footer
-   position absolute
-   bottom 0
-   width 100%
