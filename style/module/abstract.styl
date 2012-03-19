@@ -1,0 +1,63 @@
+
+/*
+   The most popular CSS abstraction. Two methods supported
+
+   // http://j.mp/bestclearfix
+   overflow()
+
+   // http://www.stubbornella.org/content/2009/07/23/overflow-a-secret-benefit/
+   overflow true
+
+   The overflow method is preferred since it's much more compact. However
+   it will hide overflowing content such as :after content outside the box.
+*/
+clearfix(use_overflow = false)
+
+   if use_overflow
+      overflow hidden
+      _overflow visible
+      zoom 1
+
+   else
+      &:before, &:after
+         content ""
+         display table
+
+      &:after
+         clear both
+
+      zoom 1
+
+
+// http://csswizardry.com/2011/09/the-nav-abstraction/
+nav()
+   list-style none
+   margin-left 0
+
+   li
+      display inline
+   a
+      display inline-block
+
+// http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+media()
+   .image
+      float left
+      margin-right 10px
+
+      img
+         display block
+
+   &, .body
+      clearfix()
+
+
+if classify
+   .clearfix
+      clearfix true
+
+   .nav
+      nav()
+
+   .media
+      media()

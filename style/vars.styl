@@ -1,7 +1,25 @@
 
+/*
+   Common shapes should be classes so they can be extended
+   @extend results to smaller file size than function
+
+   // good
+   .my-module
+      tip()
+
+   // better
+   .my-module
+      @extends .tip
+
+
+   http://learnboost.github.com/stylus/docs/extend.html
+*/
+
+classify          ?= true
+
+
 // defaults
 button-gradient   ?= false
-
 
 
 font_family    ?= 'lucida pro', 'myriad pro', sans-serif, arial
@@ -27,9 +45,10 @@ link_color     ?= #981
 button_color   ?= #009
 line_color     ?= #d
 focus_color    ?= #75b9f0
+box_color      ?= #f9
+mask_color     ?= rgba(#0, 0.75)
 
-
-// is_dark        ?= dark(bg_color)
+// is_dark     ?= dark(bg_color)
 
 
 // animation speed

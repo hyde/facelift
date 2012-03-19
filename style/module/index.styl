@@ -1,21 +1,27 @@
 
 /*
    Graphics for modules
+
+   // CDN
+   http://facelift.io/icons.ttf
+
 */
 @font-face
-   font-family 'moot'
-   src url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.eot')
-   src url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.woff') format('woff'), url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.ttf') format('truetype'), url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.svg#MootRegular') format('svg')
+   font-family 'icon'
+   src url('http://82.181.101.115:81/moot/ui/dist/font/moot-regular-webfont.eot')
+   src url('http://82.181.101.115:81/moot/ui/dist/font/moot-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.woff') format('woff'), url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.ttf') format('truetype'), url('http://localhost:8000/moot/ui/dist/font/moot-regular-webfont.svg#MootRegular') format('svg')
    font-weight normal
    font-style normal
 
+icon(char)
+   font-family icon
+   content "'%s'" % char
+
 
 @import "typo"
+@import "abstract"
 @import "box"
-@import "overlay"
-@import "tooltip"
 @import "button"
 @import "table"
 @import "form"
 @import "select"
-

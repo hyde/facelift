@@ -1,8 +1,16 @@
 
+
 html, body
    height 100%
-   bg bg_color
+   background bg_color
 
+/*
+   http://paulirish.com/2012/box-sizing-border-box-ftw/
+
+   go back with: box-sizing content-box
+*/
+*
+   box-sizing border-box
 
 // font
 html
@@ -13,17 +21,6 @@ html
    min-height 100%
    position relative
 
-
-// fade effect
-#main
-   opacity 0
-   transition opacity .5s
-
-.is-loaded
-   #main
-      opacity 1
-
-
 #main-inner
    position relative
    clearfix()
@@ -33,3 +30,6 @@ html
    max-width page_width - page_margin
    margin 0 auto
    padding 0 page_margin
+
+#content
+   padding-bottom 6em

@@ -1,19 +1,89 @@
 
-activated(speed = slow)
+appear(speed = medium)
+   top -999em
    opacity 0
    transition opacity speed
-   absolute -9999em -9999em
 
    &.is-active
       opacity 1
-      z-index 10
-      left 0
-      top 0
 
-box(bg_color = #f)
-   bg bg_color
-   padding u u2
+
+box(color = #f)
+   background color
+   padding u
    shadow u
 
    .no-boxshadow &
       border 1px solid #c
+
+
+tooltip(color)
+   box color
+   position absolute
+
+   &:after
+      icon 5
+      position absolute
+      bottom -0.9em
+      left 42%
+      text-shadow 0 4px 5px rgba(#0, .15)
+      font .8em #f
+
+      .is-below&
+         icon 8
+         bottom auto
+         top -1.1em
+         text-shadow 0 -4px 5px rgba(0, 0, 0, 0.15)
+
+   a &
+      padding uh
+
+bubble(color)
+   tooltip color
+
+   &:after
+      icon 6
+
+
+mask(color = rgba(#0, 0.75))
+   background color
+   fixed 0
+   size 100%
+
+
+
+// block 500px 300px 10px
+overlay(color)
+   box color
+   relative auto auto
+   margin 5% auto
+   overflow auto
+
+
+if classify
+   body.is-overlayed
+      overflow hidden
+
+   .box
+      box box_color
+
+   .tooltip
+      tooltip box_color
+
+   .bubble
+      bubble box_color
+
+   .mask
+      mask mask_color
+
+   .overlay
+      overlay box_color
+
+   .is-active&
+      width 700px
+      height 500px
+
+
+
+
+

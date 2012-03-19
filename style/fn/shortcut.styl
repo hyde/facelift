@@ -12,13 +12,13 @@ shadow(size = 10px, color = #0, alpha = 0.25)
 
 
 /*
-   bg #f                bg #f
-   bg 1*u 10*u          bg 1*u 10*u
-   bg 'foo.jpg'         background url('foo.jpg') 0 0 no-repeat
-   bg #c 'foo.jpg'      background #ccc url('foo.jpg') 0 0 no-repeat
-   bg #c 'foo.jpg' 0 1  background: #ccc url("foo.jpg") 0 1
+   background #f                background #f
+   background 1*u 10*u          background 1*u 10*u
+   background 'foo.jpg'         background url('foo.jpg') 0 0 no-repeat
+   background #c 'foo.jpg'      background #ccc url('foo.jpg') 0 0 no-repeat
+   background #c 'foo.jpg' 0 1  background: #ccc url("foo.jpg") 0 1
 */
-bg(arg, rest...)
+background(arg, rest...)
 
    len = length(rest)
 
@@ -43,7 +43,7 @@ bg(arg, rest...)
 /*
    font 24*u
    font 45*u/1em center -2 300
-   font 10*u/3*u bold italic #d underline right
+   font 10*u/3*u bold italic #d underline right sans-serif
 */
 font()
 
@@ -61,18 +61,22 @@ font()
          color arg
       else if arg is 'bold' or arg is 'normal'
          font-weight arg
+      else if arg is 'uppercase' or arg is 'lowercase'
+         text-transform arg
       else if arg is 'underline'
          text-decoration arg
       else if arg is 'italic'
          font-style arg
-      else if arg is a 'ident'
+      else if arg is 'left' or arg is 'right' or arg is 'center'
          text-align arg
+      else if arg is not '/'
+         font-family arg
 
 /*
    Thanks: https://github.com/visionmedia/nib
 
-   absolute 1*u         position absolute; top 1*u
-   relative 2*u 4*u     position relative; top 1*u; left 4*u
+   absolute 1px         position absolute; top 1*u
+   relative 2px 4px     position relative; top 1*u; left 4*u
 */
 
 -pos(type, args)
@@ -81,6 +85,8 @@ font()
 
    if length(args) > 1
       left args[1]
+   else
+      left args[0]
 
 fixed()
    -pos('fixed', arguments)
@@ -102,5 +108,4 @@ hover(color = blue)
 
    &:active
       color darken(color, 10)
-
 

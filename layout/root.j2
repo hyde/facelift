@@ -67,11 +67,17 @@ body {{body_id}} {{body_class}}
 <body id="{{ meta.body_id | default(node.name) }}" class="{{ meta.body_class }}">
   {% block body -%}
 
+    {# outside container #}
+    {% markdown -%}{% block top -%}{%- endblock %}{%- endmarkdown %}
+    {% block html_top -%}{%- endblock %}
+
     <div id="container">
 
       {# ie6 #}
       <!--[if lt IE 7]>
-        <div id="ie6">{% block ie6 -%}{%- endblock %}</div>
+        <div id="ie6">
+          {% block ie6 -%}{%- endblock %}
+        </div>
       <![endif]-->
 
       {# header #}
@@ -79,8 +85,14 @@ body {{body_id}} {{body_class}}
         <div id="header-inner">
           {% block header -%}
             <a id="branding" href="/">{% block branding -%}{% endblock -%}</a>
-            <nav id="nav">{% block nav -%}{% endblock -%}</nav>
-            <nav id="subnav">{% block subnav -%}{% endblock -%}</nav>
+            <nav id="nav">
+              {% markdown -%}{% block nav -%}{%- endblock %}{%- endmarkdown %}
+              {% block html_nav -%}{%- endblock %}
+            </nav>
+            <nav id="subnav">
+              {% markdown -%}{% block subnav -%}{%- endblock %}{%- endmarkdown %}
+              {% block html_subnav -%}{%- endblock %}
+            </nav>
           {%- endblock %}
         </div>
       </header>
@@ -88,7 +100,8 @@ body {{body_id}} {{body_class}}
       {# hero #}
       <section id="hero">
         <div id="hero-inner">
-          {% block hero -%}{%- endblock %}
+          {% markdown -%}{% block hero -%}{%- endblock %}{%- endmarkdown %}
+          {% block html_hero -%}{%- endblock %}
         </div>
       </section>
 
@@ -99,13 +112,20 @@ body {{body_id}} {{body_class}}
 
           {# secondary #}
           <aside id="secondary">
-            {% block secondary -%}{%- endblock %}
+            {% markdown -%}{% block secondary -%}{%- endblock %}{%- endmarkdown %}
+            {% block html_secondary -%}{%- endblock %}
           </aside>
 
           {# content #}
           <div id="content">
             {% markdown -%}{% block content -%}{%- endblock %}{%- endmarkdown %}
-            {% block html -%}{%- endblock %}
+            {% block html_content -%}{%- endblock %}
+          </div>
+
+          {# sub-content #}
+          <div id="sub-content">
+            {% markdown -%}{% block sub_content -%}{%- endblock %}{%- endmarkdown %}
+            {% block html_sub_content -%}{%- endblock %}
           </div>
 
         </div>
@@ -115,7 +135,8 @@ body {{body_id}} {{body_class}}
       {# footer #}
       <footer id="footer">
         <div id="footer-inner">
-          {% block footer -%}{%- endblock %}
+          {% markdown -%}{% block footer -%}{%- endblock %}{%- endmarkdown %}
+          {% block html_footer -%}{%- endblock %}
         </div>
       </footer>
 

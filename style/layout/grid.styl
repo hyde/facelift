@@ -1,0 +1,109 @@
+
+
+*
+   -moz-box-sizing border-box
+   -webkit-box-sizing border-box
+
+#content
+   width 980px
+
+.level2
+   background-color #e
+   height 200px
+   vertical-align bottom
+   text-align center
+   font-size 50px
+   padding 30px
+   border 3px solid blue
+
+
+// begin grid system
+.col2
+   .level2
+      display inline-block
+      width 50%
+
+.col3
+   .level2
+      display inline-block
+      width 33.333%
+
+.col4
+   .level2
+      display inline-block
+      width 25%
+
+
+@media (min-width: 768px) and (max-width: 980px)
+   .col3
+      .index1, .index2
+         width 50%
+
+      .index3
+         width 100%
+
+@media (max-width: 768px)
+   .col2, .col3
+      .level2
+         width 100%
+
+
+/*
+
+#secondary
+   text-align center
+
+   a
+      line-height u5
+      margin 0 u
+      hover #7
+      font-size smaller
+
+
+
+
+@media (min-width: 768px)
+
+   width = nav_width + nav_margin
+
+   .nav-left, .nav-right
+      #secondary
+         position absolute
+         top u4
+         width nav_width
+         text-align left
+         border-bottom 0
+
+         a
+            display block
+
+   .nav-left
+      #content
+         padding-left width
+
+      #secondary
+         left 0
+
+   .nav-right
+      #content
+         padding-right width
+
+      #secondary
+         right 0
+
+
+
+   Media Query increments: 480, 600, 768, 992 and 1382px
+
+   // landscape phones and down
+   @media (max-width: 480px)
+
+   // landscape phone to portrait tablet
+   @media (max-width: 768px)
+
+   // portrait tablet to landscape and desktop
+   @media (min-width: 768px) and (max-width: 980px)
+
+   // large desktop
+   @media (min-width: 1200px) { .. }
+*/
