@@ -1,16 +1,12 @@
 
+// bring back CSS joy
+*
+   box-sizing border-box
+
 
 html, body
    height 100%
    background bg_color
-
-/*
-   http://paulirish.com/2012/box-sizing-border-box-ftw/
-
-   go back with: box-sizing content-box
-*/
-*
-   box-sizing border-box
 
 // font
 html
@@ -21,15 +17,76 @@ html
    min-height 100%
    position relative
 
-#main-inner
-   position relative
-   clearfix()
 
 // inner elements
 #header-inner, #hero-inner, #main-inner, #footer-inner
-   max-width page_width - page_margin
+   max-width page_width
    margin 0 auto
    padding 0 page_margin
 
+
+// header
+#header
+   clearfix()
+   background #3
+
+   a
+      hover #e
+      line-height u4
+      margin-right u
+
+   #nav
+      float left
+
+   #subnav
+      float right
+
+      a
+         margin 0 0 0 u
+
+// hero
+#hero
+   display none
+
+   .hero &
+      display block
+
+
+#main-inner
+   position relative
+
 #content
    padding-bottom 6em
+
+.sidebar
+
+   #content
+      width page_width - nav_width - page_margin
+
+   #sidebar
+      position absolute
+      right 0
+      width nav_width
+
+      a
+         display block
+
+   @media (max-width: 980px)
+      #content
+         width 100%
+
+      #sidebar
+         position static
+         width 100%
+
+         a
+            display inline
+
+
+// footer
+#footer
+   position absolute
+   text-align center
+   bottom 0
+   width 100%
+   background #3

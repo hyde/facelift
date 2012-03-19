@@ -7,7 +7,11 @@ Designers and developers.
 Naming is important
    http://woork.blogspot.com/2008/11/css-coding-semantic-approach-in-naming.html
 
+## content-box
 
+Bring back CSS joy
+- http://paulirish.com/2012/box-sizing-border-box-ftw/
+- go back with: box-sizing content-box
 
 ## Global
 - #id elements: header, footer, main navi, subnav
