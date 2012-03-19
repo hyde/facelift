@@ -54,11 +54,12 @@ Bring back CSS joy
 - @media queries
 - best practises
 
-## Reusable components
+## Reusable modules
 - abstract patterns
 - visible elements
 - global & content elements
 - alternate looks with variables
+- does not carry dimensions
 
 ## Theme
 - set of defaults

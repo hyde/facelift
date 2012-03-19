@@ -1,4 +1,8 @@
 
+A grid system is any means of abstracting the layout
+A rigid grid cannot be used together with Markdown
+
+
 The grid system
 
 Markdown
