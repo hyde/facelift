@@ -1,12 +1,12 @@
 
 /*
    - zebra tables stress the eye
-   - borders on every edge is clutter, lining is more lightweight
    - if using zebras try color altering in 5 row stacks
+   - borders on every edge is clutter, simple bottom border works better
    - data is more important than header; make it visually so
 */
-#content table
-   width 100%
+table(width = 100%)
+   width width
    margin u3 0
 
    td
@@ -16,3 +16,7 @@
    th
       border-bottom 1px solid darken(line_color, 15)
       font smaller normal #7
+
+if classify
+   #content table
+      table()

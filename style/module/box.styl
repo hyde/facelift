@@ -1,4 +1,11 @@
 
+/*
+   Specify dimensions with block function. For example:
+
+   block 500px 300px 10px
+*/
+
+// make element appearable
 appear(speed = medium)
    top -999em
    opacity 0
@@ -7,7 +14,7 @@ appear(speed = medium)
    &.is-active
       opacity 1
 
-
+// generic box
 box(color = #f)
    background color
    padding u
@@ -17,6 +24,7 @@ box(color = #f)
       border 1px solid #c
 
 
+// generic box with arrow
 tooltip(color)
    box color
    position absolute
@@ -38,13 +46,14 @@ tooltip(color)
    a &
       padding uh
 
+// speech bubble arrow
 bubble(color)
    tooltip color
 
    &:after
       icon 6
 
-
+// overlay mask to fill the whole page
 mask(color = rgba(#0, 0.75))
    background color
    fixed 0
@@ -52,7 +61,6 @@ mask(color = rgba(#0, 0.75))
 
 
 
-// block 500px 300px 10px
 overlay(color)
    box color
    relative auto auto
@@ -78,12 +86,4 @@ if classify
 
    .overlay
       overlay box_color
-
-   .is-active&
-      width 700px
-      height 500px
-
-
-
-
 

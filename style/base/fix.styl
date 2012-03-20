@@ -53,8 +53,6 @@ img
    border 0
    -ms-interpolation-mode bicubic
 
-svg:not(:root)
-   overflow hidden
 
 figure, form
    margin 0
@@ -82,16 +80,6 @@ input[type="checkbox"], input[type="radio"]
    *height 13px
    *width 13px
 
-input[type="search"]
-   -webkit-appearance textfield
-   -moz-box-sizing content-box
-   -webkit-box-sizing content-box
-   box-sizing content-box
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button
-   -webkit-appearance none
-
 button::-moz-focus-inner, input::-moz-focus-inner
    border 0
    padding 0
@@ -107,3 +95,45 @@ table
 th
    text-align left
 
+
+
+if complete_fix
+
+   audio, canvas, video
+      display inline-block
+      *display inline
+      *zoom 1
+
+   audio:not([controls])
+      display none
+      height 0
+
+   abbr[title]
+      border-bottom 1px dotted
+
+   dfn
+      font-style italic
+
+   mark
+      background #ff0
+      color #000
+
+   q
+      quotes none
+
+      &:before, &:after
+         content: '';
+         content: none;
+
+
+   svg:not(:root)
+      overflow hidden
+
+   input[type="search"]
+      -webkit-appearance textfield
+      -moz-box-sizing content-box
+      -webkit-box-sizing content-box
+      box-sizing content-box
+
+      &::-webkit-search-decoration, &::-webkit-search-cancel-button
+         -webkit-appearance none

@@ -75,18 +75,28 @@ font()
 /*
    Thanks: https://github.com/visionmedia/nib
 
-   absolute 1px         position absolute; top 1*u
-   relative 2px 4px     position relative; top 1*u; left 4*u
+   absolute 1px               --> position: absolute; top: 1px; left: 1px;
+   relative 2px 4px           --> position: relative; top: 1px; left: 4px;
+   fixed top 5px right 2px    --> position: fixed; top: 5px; right: 4px;
 */
 
 -pos(type, args)
-   position unquote(type)
-   top args[0]
+   position: unquote(type)
+   len = length(args)
+   arg0 = args[0]
 
-   if length(args) > 1
+   if len is 1
+      top arg0
+      left arg0
+
+   else if len is 2
+      top arg0
       left args[1]
-   else
-      left args[0]
+
+   else if len is 4
+      {arg0}: args[1]
+      {args[2]}: args[3]
+
 
 fixed()
    -pos('fixed', arguments)
@@ -96,7 +106,6 @@ absolute()
 
 relative()
    -pos('relative', arguments)
-
 
 
 hover(color = blue)

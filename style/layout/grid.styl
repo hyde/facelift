@@ -1,11 +1,11 @@
 
-.level1
+grid(padding, cell = '*')
 
-   // all cells
-   > div
+   // single cell
+   > {cell}
       vertical-align top
       display inline-block
-      padding grid_padding
+      padding padding
 
    // scalable images
    img
@@ -16,67 +16,69 @@
       width 80%
       margin 0 auto
       text-align center
-      padding grid_padding
+      padding padding
+
+   // 2 cols
+   &.has2 > {cell}
+      width 50%
+
+   // 3 cols
+   &.has3 > {cell}
+      width 33.3%
+
+   // 4 cols
+   &.has4 > {cell}
+      width 25%
+      text-align center
+
+   // 6 cols
+   &.has6 > {cell}
+      width 16.6%
+      text-align center
 
 
-// 2 cols
-.has2 > div
-   width 50%
+   // smaller font
+   @media (min-width: 750px) and (max-width: 850px)
+      &
+         font-size 85%
 
-// 3 cols
-.has3 > div
-   width 33.3%
+   // column reorder
+   @media (min-width: 530px) and (max-width: 750px)
 
-// 4 cols
-.has4 > div
-   width 25%
-   text-align center
-
-// 6 cols
-.has6 > div
-   width 16.6%
-   text-align center
-
-
-// smaller font
-@media (min-width: 750px) and (max-width: 850px)
-   .level1
-      font-size 85%
-
-// column reorder
-@media (min-width: 530px) and (max-width: 750px)
-
-   // 2 --> 1 + 1
-   .has2 > div
-      display block
-      width 80%
-      margin 0 auto
-
-   // 3 --> 2 + 1
-   .has3
-      > div
-         width 50%
-
-      .index3
-         width 80%
+      // 2 --> 1 + 1
+      &.has2 > {cell}
          display block
+         width 80%
          margin 0 auto
 
-// mobile: 1 column only
-@media (max-width: 530px)
-   .level1
+      // 3 --> 2 + 1
+      &.has3
+         > {cell}
+            width 50%
+
+         .index3
+            width 80%
+            display block
+            margin 0 auto
+
+   // mobile: 1 column only
+   @media (max-width: 530px)
       hgroup
          font-size 80%
          width 100%
 
-   .has2, .has3
-      > div
-         width 100%
+      &.has2, &.has3
+         > {cell}
+            width 100%
 
-// 4 --> 2 + 2
-@media (max-width: 750px)
-   .has4 > div
-      width 50%
+   // 4 --> 2 + 2
+   @media (max-width: 750px)
+      &.has4 > {cell}
+         width 50%
 
-   .has6 > div
-      width 33.3%
+      &.has6 > {cell}
+         width 33.3%
+
+if classify
+   .grid
+      grid 15px section
