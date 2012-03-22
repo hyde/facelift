@@ -27,6 +27,20 @@ validator(prefix = '')
       .{p}placeholder
          display none
 
+   // ok
+   &.{p}ok input
+      border-color ok_color
+
+   &.{p}ok:after
+      icon C
+      font u2 green
+      absolute top 30% right u
+
+   // error
+   &.{p}error
+      input
+         border-color rgba(error_color,.8)
+         box-shadow none
 
    // info
    .{p}info
@@ -43,6 +57,20 @@ validator(prefix = '')
       .{p}error
          color #c00
 
+
+   // info box below field
+   &.{p}info-below
+      transition margin fast
+
+      &.m-ok, &.m-error, &.m-progress
+         margin-bottom 2em
+
+         .m-info
+            left u
+            top 115%
+            width 100%
+            text-align left
+
    // progress
    &.{p}progress
       opacity 0.5
@@ -53,10 +81,17 @@ validator(prefix = '')
       .{p}progress
          display block
 
+      input
+         border-color lighten(line_color, 20)
+         cursor wait
+         color #9
 
-   // ok / error
-   &.{p}ok .{p}title, &.{p}error .{p}title
-      display none
+
+   // hide title
+   &.{p}ok, &.{p}error, &.{p}progress
+      .{p}title
+         display none
+
 
 
 if classify
