@@ -32,6 +32,11 @@
    <a href="http://github.com/flowplayer/player/issues">Report a bug</a>
 {%- endblock %}
 
+{% block script %}
+   {{ super() }}
+   <script src="/media/js/bottom.js"></script>
+{%- endblock %}
+
 {% block html_footer %}
    <h3>Less but better. <a href="/about/">More about us.</a></h3>
 {%- endblock %}

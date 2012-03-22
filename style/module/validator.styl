@@ -1,0 +1,64 @@
+
+
+validator(prefix = '')
+   p = prefix
+   position relative
+
+   // placeholder
+   .{p}placeholder
+      absolute 20% u
+      cursor text
+      color #c
+      white-space nowrap
+      margin 0
+
+
+   // focus
+   &.{p}focus
+      .{p}placeholder
+         color #d
+
+      .{p}title
+         display inline
+
+
+   // filled
+   &.{p}filled
+      .{p}placeholder
+         display none
+
+
+   // info
+   .{p}info
+      absolute 20% 250px
+      color #7
+
+      > *
+         display none
+         margin 0
+
+      .{p}active
+         display inline
+
+      .{p}error
+         color #c00
+
+   // progress
+   &.{p}progress
+      opacity 0.5
+
+      .{p}ok, .{p}title
+         display none
+
+      .{p}progress
+         display block
+
+
+   // ok / error
+   &.{p}ok .{p}title, &.{p}error .{p}title
+      display none
+
+
+if classify
+   label
+      validator()

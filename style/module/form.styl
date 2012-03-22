@@ -1,53 +1,57 @@
 /*
-   - error colors should be subtle / iconic
-   - red color for error works but can be naive
+   - error colors should be subtle, red can be naive
+   - concider an error icon
    - input nested inside label gets focused with a click
-   - select = custom skin
    - no support for input type="button", input type="image"
    - fieldset can add structure
+
+   - select = custom skin
+   - textareas should autogrow
 */
 
-button, input, select, textarea
-   font-size 95%
+inputs()
 
-fieldset
-   border 0
+   input, textarea
+      font-size 95%
+      border 1px solid line_color
+      border-radius uh
+      padding uh
+      box-shadow inset 0 0 1px rgba(#0, .1)
+      transition fast
+      background #f
+
+      &:focus
+         border-color rgba(focus_color,.8)
+         box-shadow inset 0 0 1px rgba(#0, .1), 0 0 8px rgba(focus_color,.6)
+         outline 0
+
+      &[disabled], &[readonly]
+         background #f5
+         cursor not-allowed
+         border-color line_color
+         box-shadow none
+
+   // autogrow is better
+   textarea
+      resize none
+      overflow hidden
 
    label
-      float left
-      padding-right u
-      margin u 0
+      margin 1em 0
+      display block
+      cursor pointer
 
-legend
-   font-size large
+   // fieldset groups inputs side by side
+   fieldset
+      border 0
 
-label
-   margin 1em 0
-   display block
-   cursor pointer
+      label
+         display inline-block
+         padding-right u
+         margin u 0
 
-textarea
-   resize none
+   legend
+      font-size large
 
-input[type="radio"], input[type="checkbox"]
-  display inline-block
-  margin-right uh
-
-input, textarea
-   border 1px solid line_color
-   border-radius uh
-   padding uh
-   box-shadow inset 0 0 1px rgba(#0, .1)
-   transition all fast
-   background #f
-
-   &:focus
-      border-color rgba(focus_color,.8)
-      box-shadow inset 0 0 1px rgba(#0, .1), 0 0 8px rgba(focus_color,.6)
-      outline 0
-
-   &[disabled], &[readonly]
-      background-color #f5
-      cursor not-allowed
-      border-color line_color
-      box-shadow none
+if classify
+   inputs()

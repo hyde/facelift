@@ -2,7 +2,7 @@
 /*! Thanks: http://github.com/necolas/normalize.css */
 
 
-/* FIX HTML ERRORS (no normalization) */
+/* FIX HTML ERRORS (no normalization, no IE7 branching) */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary
    display block
@@ -60,25 +60,21 @@ figure, form
 button, input, select, textarea
    font-size 100%
    margin 0
-   vertical-align baseline
-   *vertical-align middle
+   vertical-align top
 
 button, input
    line-height normal
 
 button, input[type="button"], input[type="reset"], input[type="submit"]
    cursor pointer
-   // -webkit-appearance button
-   *overflow visible
 
 button[disabled], input[disabled]
    cursor default
 
 input[type="checkbox"], input[type="radio"]
-   box-sizing border-box
    padding 0
-   *height 13px
-   *width 13px
+   display inline-block
+   margin-right uh
 
 button::-moz-focus-inner, input::-moz-focus-inner
    border 0
@@ -95,14 +91,10 @@ table
 th
    text-align left
 
-
-
 if complete_fix
 
    audio, canvas, video
       display inline-block
-      *display inline
-      *zoom 1
 
    audio:not([controls])
       display none
@@ -125,15 +117,11 @@ if complete_fix
          content: '';
          content: none;
 
-
    svg:not(:root)
       overflow hidden
 
    input[type="search"]
       -webkit-appearance textfield
-      -moz-box-sizing content-box
-      -webkit-box-sizing content-box
-      box-sizing content-box
 
       &::-webkit-search-decoration, &::-webkit-search-cancel-button
          -webkit-appearance none

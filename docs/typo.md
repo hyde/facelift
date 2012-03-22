@@ -1,6 +1,10 @@
 
-80% of design is typography, rest is spacing and images
+80% of design is typography. A font can drastically
+change the overall tone of the site. For good or bad.
+
+The rest is spacing and illustration
 Tight patterns on frameworks will kill creativity.
+
 
 Only the content element should is applied for typography rules
 Other parts are highly customized and should not be affected.

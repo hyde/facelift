@@ -1,18 +1,29 @@
----
-default_block: html
----
+
 
 <h1>Form</h1>
 
 <form>
 
-   <fieldset>
-      <legend>Jotain</legend>
-      <label><input placeholder="username"/></input></label>
-      <label><input placeholder="password" type="password"/></input></label>
-   </fieldset>
+   <legend>Jotain</legend>
+   <label>
+      <input placeholder="username" required="required"
+         data-required="joitna"
+         title="jotain vain"/></input>
+   </label>
 
-   <label><input placeholder="email" type="email"/></input></label>
+   <label>
+      <input placeholder="password" type="password" minlength="4"
+         data-minlength="jotainav sldkja"/></input>
+   </label>
+
+   <label>
+      <input placeholder="email" type="email"
+         title="joasidfja"
+         data-email="asdflkjsadf"
+         data-ok="This is ok"/>
+      </input>
+   </label>
+
    <label><textarea placeholder="textarea"/></textarea></label>
 
    <fieldset>

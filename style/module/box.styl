@@ -7,7 +7,7 @@
 
 // make element appearable
 appear(speed = medium)
-   top -999em
+   absolute -999em 0
    opacity 0
    transition opacity speed
 
@@ -31,9 +31,7 @@ tooltip(color)
 
    &:after
       icon 5
-      position absolute
-      bottom -0.9em
-      left 42%
+      absolute bottom -0.9em left 42%
       text-shadow 0 4px 5px rgba(#0, .15)
       font .8em #f
 

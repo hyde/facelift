@@ -3,7 +3,7 @@
    <div class="select is-active">
       <div class="value">this is option</div>
       <ul>
-         <li class="selected">this is option</li>
+         <li class="is-selected">this is option</li>
          <li>1</li>
          <li>2</li>
       </ul>
@@ -11,14 +11,17 @@
    </div>
 */
 
-.select
+select(width = 200px)
    position relative
+   display inline-block
 
    input
       display none
 
-   .value
+   label
       cursor pointer
+      line-height 2
+      margin 0
 
       &:after
          icon 5
@@ -30,13 +33,13 @@
       border-radius 3px
       margin 0
       padding 0
-      width 200px
+      width width
       absolute -999em 0
       opacity 0
       transition opacity fast
 
       .is-active&
-         absolute - u2 0
+         top 100%
          opacity 1
 
    li
@@ -58,4 +61,6 @@
             float right
 
 
-
+if classify
+   .select
+      select 200px

@@ -12,10 +12,15 @@ combine:
       - selectinput.js
       - label.js
       - validator.js
+      - autogrow.js
 ---
 
 $(function(){
    $("html").addClass('is-loaded');
 
    $("select").selectinput();
+
+   $("textarea").autogrow();
+
+   $("form").validator2();
 });
