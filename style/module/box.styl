@@ -25,24 +25,30 @@ box(color = #f)
 
 
 // generic box with arrow
-tooltip(color)
+tooltip(color = #f, arrow_size = 1em, arrow_edge = bottom)
    box color
    position absolute
+   arrow color arrow_size arrow_edge
 
-   &:after
-      icon 5
-      absolute bottom -0.9em left 42%
-      text-shadow 0 4px 5px rgba(#0, .15)
-      font .8em #f
-
-      .is-below&
-         icon 8
-         bottom auto
-         top -1.1em
-         text-shadow 0 -4px 5px rgba(0, 0, 0, 0.15)
-
+   // inside trigger element
    a &
       padding uh
+
+arrow(color = #f, size = .9em, edge = bottom)
+   &:after
+      font size / 1 color icon
+      absolute auto 42%
+      shadow_color = rgba(#0, .15)
+
+      if edge is bottom
+         text-shadow 0 4px 5px shadow_color
+         content '5'
+         top 99%
+
+      if edge is top
+         text-shadow 0 -4px 5px shadow_color
+         content '8'
+         top -1em
 
 // speech bubble arrow
 bubble(color)
@@ -74,7 +80,7 @@ if classify
       box box_color
 
    .tooltip
-      tooltip box_color
+      tooltip box_color 1.3em bottom
 
    .bubble
       bubble box_color

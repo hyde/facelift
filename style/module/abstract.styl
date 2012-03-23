@@ -40,17 +40,11 @@ nav()
       display inline-block
 
 // http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
-media()
-   .image
-      float left
-      margin-right 10px
-
-      img
-         display block
-
-   &, .body
-      clearfix()
-
+media(margin = u)
+   > *
+      display inline-block
+      vertical-align top
+      margin 0 margin
 
 if classify
    .clearfix
@@ -60,4 +54,4 @@ if classify
       nav()
 
    .media
-      media()
+      media u
