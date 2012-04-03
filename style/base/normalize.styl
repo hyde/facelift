@@ -1,43 +1,41 @@
 
-a
-   text-decoration none
-   hover link_color
+normalize()
+   a
+      text-decoration none
+      hover link_color
 
-// *bold* in markdown
-b, em
-   font-weight bold
-   font-style normal
+   // *bold* in markdown
+   b, em
+      font-weight bold
+      font-style normal
 
-strong, dfn
-   font italic
+   strong, dfn
+      font italic
 
-mark
-   background #ff0
+   mark
+      background #ff0
 
-p, pre, dd, ol, ul, fieldset, legend
-   margin 1em 0
-   padding 0
+   p, pre, dd, ol, ul, fieldset, legend
+      margin 0 0 1em
+      padding 0
 
-li
-   margin u 0
+   li
+      margin u 0
 
-ol, ul, blockquote
-   padding-left 1em
-   margin-left 0
+   ol, ul, blockquote
+      padding-left 1em
+      margin-left 0
 
-blockquote
-   padding-left u3
+   blockquote
+      padding-left u3
 
-small, sub, sup
-   font-size 75%
+   small, sub, sup
+      font-size 75%
 
-// sane margins for headers
-h1, h2, h3, h4, h5, h6
-   margin u 0 0
-   margin-bottom - u
-
-hr
-   border 0
-   border-bottom 1px solid line_color
+   hr
+      border 0
+      border-bottom 1px solid line_color
 
 
+if classify
+   normalize()

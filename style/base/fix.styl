@@ -4,124 +4,140 @@
 
 /* FIX HTML ERRORS (no normalization, no IE7 branching) */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary
-   display block
+fix(level = 0)
 
-[hidden]
-   display none
+   article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary
+      display block
 
-html
-   font-size 100%
-   -webkit-text-size-adjust 100%
-   -ms-text-size-adjust 100%
+   html
+      font-size 100%
+      -webkit-text-size-adjust 100%
+      -ms-text-size-adjust 100%
 
-body
-   margin 0
+   body
+      margin 0
 
-a:focus
-   outline thin dotted
+   a:focus
+      outline thin dotted
 
-a:hover, a:active
-   outline 0
+   a:hover, a:active
+      outline 0
 
-abbr[title]
-   border-bottom 0
+   table
+      border-collapse collapse
+      border-spacing 0
 
+   th
+      text-align left
 
-pre
-   white-space pre
-   white-space pre-wrap
-   word-wrap break-word
+   nav ul, nav ol
+      list-style none
+      list-style-image none
 
-sub, sup
-   line-height 0
-   position relative
-   vertical-align baseline
-
-sup
-   top -0.5em
-
-sub
-   bottom -0.25em
+   img
+      border 0
+      -ms-interpolation-mode bicubic
 
 
-nav ul, nav ol
-   list-style none
-   list-style-image none
-
-img
-   border 0
-   -ms-interpolation-mode bicubic
+   /* second level fixes */
+   if level > 0
+      abbr[title]
+         border-bottom 0
 
 
-figure, form
-   margin 0
+      [hidden]
+         display none
 
-button, input, select, textarea
-   font-size 100%
-   margin 0
-   vertical-align top
+      pre
+         white-space pre
+         white-space pre-wrap
+         word-wrap break-word
 
-button, input
-   line-height normal
+      sub, sup
+         line-height 0
+         position relative
+         vertical-align baseline
 
-button, input[type="button"], input[type="reset"], input[type="submit"]
-   cursor pointer
+      sup
+         top -0.5em
 
-button[disabled], input[disabled]
-   cursor default
+      sub
+         bottom -0.25em
 
-input[type="checkbox"], input[type="radio"]
-   padding 0
-   display inline-block
-   margin-right uh
+      figure
+         margin 0
 
-button::-moz-focus-inner, input::-moz-focus-inner
-   border 0
-   padding 0
 
-textarea
-   overflow auto
-   vertical-align top
+   /* 3rd level fixes */
+   if level > 1
+      audio, canvas, video
+         display inline-block
 
-table
-   border-collapse collapse
-   border-spacing 0
+      audio:not([controls])
+         display none
+         height 0
 
-th
-   text-align left
+      abbr[title]
+         border-bottom 1px dotted
 
-if complete_fix
+      dfn
+         font-style italic
 
-   audio, canvas, video
+      mark
+         background #ff0
+         color #000
+
+      q
+         quotes none
+
+         &:before, &:after
+            content: '';
+            content: none;
+
+      svg:not(:root)
+         overflow hidden
+
+
+      input[type="search"]
+         -webkit-appearance textfield
+
+         &::-webkit-search-decoration, &::-webkit-search-cancel-button
+            -webkit-appearance none
+
+// form
+fix_form()
+   form
+      margin 0
+
+   button, input, select, textarea
+      font-size 100%
+      margin 0
+      vertical-align top
+
+   button, input
+      line-height normal
+
+   button, input[type="button"], input[type="reset"], input[type="submit"]
+      cursor pointer
+
+   button[disabled], input[disabled]
+      cursor default
+
+   input[type="checkbox"], input[type="radio"]
+      padding 0
       display inline-block
+      margin-right uh
 
-   audio:not([controls])
-      display none
-      height 0
+   button::-moz-focus-inner, input::-moz-focus-inner
+      border 0
+      padding 0
 
-   abbr[title]
-      border-bottom 1px dotted
+   textarea
+      overflow auto
+      vertical-align top
 
-   dfn
-      font-style italic
 
-   mark
-      background #ff0
-      color #000
+if classify
+   fix fix_level
+   fix_form()
 
-   q
-      quotes none
-
-      &:before, &:after
-         content: '';
-         content: none;
-
-   svg:not(:root)
-      overflow hidden
-
-   input[type="search"]
-      -webkit-appearance textfield
-
-      &::-webkit-search-decoration, &::-webkit-search-cancel-button
-         -webkit-appearance none
