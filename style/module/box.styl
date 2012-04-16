@@ -25,16 +25,16 @@ box(color = #f)
 
 
 // generic box with arrow
-tooltip(color = #f, arrow_size = 1em, arrow_edge = bottom)
+tooltip(arrow_edge = bottom, arrow_size = 1em, color = #f)
    box color
    position absolute
-   arrow color arrow_size arrow_edge
+   arrow arrow_edge arrow_size color
 
    // inside trigger element
    a &
       padding uh
 
-arrow(color = #f, size = .9em, edge = bottom)
+arrow(edge = bottom, size = .9em, color = #f)
    &:after
       font size / 1 color icon
       absolute auto 42%
@@ -80,7 +80,7 @@ if classify
       box box_color
 
    .tooltip
-      tooltip box_color 1.3em bottom
+      tooltip bottom 1.3em box_color
 
    .bubble
       bubble box_color

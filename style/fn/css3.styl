@@ -361,8 +361,12 @@ linear-gradient(from = #f9, to = darken(from, 10))
    background-image -moz-linear-gradient(from, to)
    background-image -webkit-gradient(linear, 0 0, 0 100%, from(from), to(to))
 
-radial-gradient(from = #f9, to = #d, size = 50%)
+radial-gradient(from = #f9, to = darken(from, 10), size = 50%)
    background from
    background -moz-radial-gradient(center, from, to) no-repeat to
    background -webkit-gradient(radial, size size, 0, size size, 500, from(from), to(to)) no-repeat to
+
+step-gradient(from = #f9, to = darken(from, 10), stop = 50%)
+   background-image -moz-linear-gradient(top, from stop, to stop);
+   background-image -webkit-linear-gradient(top, from stop, to stop);
 

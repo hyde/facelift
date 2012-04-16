@@ -16,7 +16,6 @@
 */
 
 classify          ?= true
-icon_font         ?= http://localhost:8000/moot/ui/dist/font/moot-regular-webfont
 
 // 0, 1 or 2
 fix_level         ?= 0
@@ -26,7 +25,7 @@ button-gradient   ?= false
 shadow-input      ?= false
 
 
-font_family    ?= 'lucida pro', 'myriad pro', sans-serif, arial
+font_family    ?= 'myriad pro', 'lucida pro', sans-serif, arial
 font_size      ?= 16px
 
 // spacing
@@ -65,17 +64,17 @@ slow           ?= .8s
 
 
 // helper units for sizing
-u              = spacing
-uh             = spacing / 2
-u2             = spacing * 2
-u3             = spacing * 3
-u4             = spacing * 4
-u5             = spacing * 5
-u6             = spacing * 6
+u              ?= spacing
+uh             ?= spacing / 2
+u2             ?= spacing * 2
+u3             ?= spacing * 3
+u4             ?= spacing * 4
+u5             ?= spacing * 5
+u6             ?= spacing * 6
 
 // font sizing
-smaller        = basefont * 0.9
-small          = basefont * 0.7
-larger         = basefont * 1.2
-large          = basefont * 1.5
-x-large        = basefont * 2
+smaller        ?= basefont * 0.9
+small          ?= basefont * 0.7
+larger         ?= basefont * 1.2
+large          ?= basefont * 1.5
+x-large        ?= basefont * 2
