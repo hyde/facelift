@@ -34,7 +34,7 @@ validator(prefix = '')
    &.{p}ok:after
       icon C
       font u2 green
-      absolute top 30% right u
+      absolute top 22% right 3%
 
    // error
    &.{p}error
@@ -62,10 +62,10 @@ validator(prefix = '')
    &.{p}info-below
       transition margin fast
 
-      &.m-ok, &.m-error, &.m-progress
+      &.{p}ok, &.{p}error, &.{p}progress
          margin-bottom 2em
 
-         .m-info
+         .{p}info
             left u
             top 115%
             width 100%
