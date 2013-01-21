@@ -1,4 +1,12 @@
 
+- least amount of JS possible
+- http://duruk.net/some-web-development-tips/
+
+1. plain text
+2. + css (mobile first)
+4. + javascript (after css overlay tricks)
+
+
 # HTML layout
 
 Every website has a surprisingly similar hierarchical structure.
@@ -42,6 +50,7 @@ Bring back CSS joy
 - shapes
 - shortcuts
 
+
 ## Normalization
 - fix
 - normalize
@@ -60,6 +69,7 @@ Bring back CSS joy
 - global & content elements
 - alternate looks with variables
 - does not carry dimensions
+- use @extends (http://learnboost.github.com/stylus/docs/extend.html)
 
 ## Theme
 - set of defaults

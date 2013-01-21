@@ -1,10 +1,17 @@
 
-/*! Thanks: http://github.com/necolas/normalize.css */
+/*! Fix */
 
 
-/* FIX HTML ERRORS (no normalization, no IE7 branching) */
+/*
+   Fixing (reseting) and normalization are completely different things and should be separated.
+   Fixing should be applied globally and normalization should only go to the content areas.
+*/
 
 fix(level = 0)
+
+   // bring back CSS joy
+   *
+      box-sizing border-box
 
    article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary
       display block
@@ -17,11 +24,12 @@ fix(level = 0)
    body
       margin 0
 
-   a:focus
-      outline thin dotted
+   a
+      &:focus
+         outline thin dotted
 
-   a:hover, a:active
-      outline 0
+      &:hover, &:active
+         outline 0
 
    table
       border-collapse collapse
@@ -30,13 +38,17 @@ fix(level = 0)
    th
       text-align left
 
-   nav ul, nav ol
-      list-style none
-      list-style-image none
+   nav
+      ul, ol
+         list-style none
+         list-style-image none
 
    img
       border 0
       -ms-interpolation-mode bicubic
+
+   figure
+      margin 0
 
 
    /* second level fixes */
@@ -63,10 +75,6 @@ fix(level = 0)
 
       sub
          bottom -0.25em
-
-      figure
-         margin 0
-
 
    /* 3rd level fixes */
    if level > 1

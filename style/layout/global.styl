@@ -16,97 +16,89 @@
    - Nothing more
 */
 
+/*! Globals */
 
-// bring back CSS joy
-*
-   box-sizing border-box
-
-
-html, body
-   height 100%
-   background bg_color
-
-// font
 html
    font-family font_family
    font-size font_size
+   height 100%
+
+body
+   background bg_color
+   height 100%
+
 
 #container
    min-height 100%
-   position relative
-
-
-// footer
-#footer
-   position absolute
-   text-align center
-   bottom 0
-   width 100%
-   background #3
+   margin-bottom -(footer_height) // space for footer
 
 
 // inner elements
-#header-inner, #hero-inner, #main-inner, #footer-inner
+.wrap
    max-width page_width
    margin 0 auto
-   padding 0 page_margin
+   padding 0 u4
 
 
 // header
 #header
-   clearfix()
-   background #3
-   padding 10px 0 15px 0
+   text-align center
+   clearfix true
+   background dark
+   font-size 90%
+   line-height 35px
+
+   nav
+      display inline-block
 
    a
-      hover #e
-      margin-right u
+      color #c
+      margin 0 u
+      text-decoration none
+      transition color fast
 
-   #nav
-      float left
+      &:hover
+         color #f
 
-   #subnav
+      &:active
+         color #9
+
+   #account
       float right
 
-      a
-         margin 0 0 0 u
+// subnav
+#subnav
+   text-align center
+   background-color light
 
-// hero
-#hero
-   display none
-
-   .hero &
-      display block
-
-
-#main-inner
-   position relative
-
-#content
-   padding-bottom 6em
+   a
+      display inline-block
+      padding 10px 0 7px
+      margin 0 u
+      font-size 90%
+      hover #6
+      text-decoration none
 
 
-.sidebar
+.normalized#content
+   padding-bottom 100px
 
-   #content
-      width page_width - nav_width - page_margin
 
-   #sidebar
-      position absolute
-      right 0
-      width nav_width
+// main footer
+#main footer
+   text-align center
+   padding 100px 0
 
-      a
-         display block
 
-   @media (max-width: 980px)
-      #content
-         width 100%
+// global footer
+#footer
+   height footer_height
+   text-align center
+   background #3
+   padding 0 spacing
 
-      #sidebar
-         position static
-         width 100%
-
-         a
-            display inline
-
+   a
+      display inline-block
+      hover #e
+      margin u uh 0
+      text-decoration none

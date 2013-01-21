@@ -1,4 +1,6 @@
 
+Good read: http://css-tricks.com/dont-overthink-it-grids/
+
 A grid system is any means of abstracting the layout
 A rigid grid cannot be used together with Markdown
 

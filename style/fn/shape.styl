@@ -17,10 +17,11 @@ circle(d = 1em)
 
 dot(d = 1em, color = red)
    circle d
-   font #f center d
+   font white center d
    background color
+   line-height d
 
-triangle(size = 1em, edge = top)
+triangle(size = 1em, edge = top, color = inherit)
    border size solid transparent
-   border-{edge}-color inherit
+   border-{edge}-color color
    block 0

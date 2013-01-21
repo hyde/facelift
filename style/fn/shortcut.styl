@@ -8,7 +8,7 @@ shadow(size = 10px, color = #0, alpha = 0.25)
    if color is a 'unit'
       box-shadow 0 0 size rgba(#0, color)
    else
-      box-shadow 0 0 size rgba(color, alpha)
+      box-shadow 0 0 size rgba(#0, alpha)
 
 
 /*
@@ -18,7 +18,7 @@ shadow(size = 10px, color = #0, alpha = 0.25)
    background #c 'foo.jpg'      background #ccc url('foo.jpg') 0 0 no-repeat
    background #c 'foo.jpg' 0 1  background: #ccc url("foo.jpg") 0 1
 */
-background(arg, rest...)
+bg(arg, rest...)
 
    len = length(rest)
 
@@ -111,13 +111,13 @@ relative()
    -pos('relative', arguments)
 
 
-hover(color = blue, mouseover = lighten(color, 10), click = darken(mouseover, 10))
-   color color
-   transition color fast
+hover(col = blue, hover = darken(col, 10), active = lighten(col, 10))
+   color col
+   transition color .4s
 
    &:hover
-      color mouseover
+      color hover
 
    &:active
-      color click
+      color active
 

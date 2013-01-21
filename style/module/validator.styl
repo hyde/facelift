@@ -6,17 +6,18 @@ validator(prefix = '')
 
    // placeholder
    .{p}placeholder
-      absolute 30% u
+      absolute 50% u
       cursor text
-      color #c
+      color gray3
       white-space nowrap
       margin 0
+      transition color fast
 
 
    // focus
    &.{p}focus
       .{p}placeholder
-         color #d
+         color gray4
 
       .{p}title
          display inline
@@ -44,32 +45,25 @@ validator(prefix = '')
 
    // info
    .{p}info
-      absolute 20% 250px
-      color #7
+      color gray3
+      font-size 90%
+      margin-top uh
+      position absolute
 
       > *
          display none
-         margin 0
 
       .{p}active
          display inline
 
       .{p}error
-         color #c00
+         color error_color
 
 
-   // info box below field
-   &.{p}info-below
-      transition margin fast
+   // inline info
+   &.{p}inline-info .{p}info
+      absolute 20% 250px
 
-      &.{p}ok, &.{p}error, &.{p}progress
-         margin-bottom 2em
-
-         .{p}info
-            left u
-            top 115%
-            width 100%
-            text-align left
 
    // progress
    &.{p}progress
@@ -82,9 +76,9 @@ validator(prefix = '')
          display block
 
       input
-         border-color lighten(line_color, 20)
+         border-color lighten(gray4, 20)
          cursor wait
-         color #9
+         color gray3
 
 
    // hide title

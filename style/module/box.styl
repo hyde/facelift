@@ -15,7 +15,7 @@ appear(speed = medium)
       opacity 1
 
 // generic box
-box(color = #f)
+box(color = white)
    background color
    padding u
    shadow u
@@ -25,7 +25,7 @@ box(color = #f)
 
 
 // generic box with arrow
-tooltip(arrow_edge = bottom, arrow_size = 1em, color = #f)
+tooltip(arrow_edge = bottom, arrow_size = 1em, color = gray5)
    box color
    position absolute
    arrow arrow_edge arrow_size color
@@ -34,21 +34,27 @@ tooltip(arrow_edge = bottom, arrow_size = 1em, color = #f)
    a &
       padding uh
 
-arrow(edge = bottom, size = .9em, color = #f)
+arrow(edge = bottom, size = .9em, color = white)
    &:after
       font size / 1 color icon_font
-      absolute auto 42%
-      shadow_color = rgba(#0, .15)
+      position absolute
+      shadow_color = rgba(black, .15)
+      text-shadow 0 4px 5px shadow_color
+
+      if edge is right
+         content '7'
+         left 99.8%
+         top 38%
 
       if edge is bottom
-         text-shadow 0 4px 5px shadow_color
          content '5'
          top 98%
 
       if edge is top
          text-shadow 0 -4px 5px shadow_color
          content '3'
-         top -1em
+         top -.8em
+         left 45%
 
 // speech bubble arrow
 bubble(color)
@@ -58,7 +64,7 @@ bubble(color)
       icon 6
 
 // overlay mask to fill the whole page
-mask(color = rgba(#0, 0.75))
+mask(color = rgba(black, 0.75))
    background color
    fixed 0
    size 100%
@@ -73,21 +79,22 @@ overlay(color)
 
 
 if classify
+   /*! Boxes */
    body.is-overlayed
       overflow hidden
 
    .box
-      box box_color
+      box gray5
 
    .tooltip
-      tooltip bottom 1.3em box_color
+      tooltip bottom 1.3em gray5
 
    .bubble
-      bubble box_color
+      bubble gray5
 
    .mask
       mask mask_color
 
    .overlay
-      overlay box_color
+      overlay gray5
 

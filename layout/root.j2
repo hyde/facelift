@@ -1,169 +1,120 @@
+{%
+
+   set meta, node, page, env = resource.meta, resource.node, resource, site.config
+
+-%}
 <!doctype html>
 
-{#
-head
-   style
-   head_script
+   <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+   <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+   <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
-body {{body_id}} {{body_class}}
+   <head>
 
-  #container
+      <meta charset="utf-8">
 
-    #header
-      #branding
-      #nav
-      #subnav
+      {# use chrome frame & force latest IE engine -#}
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    #hero
-      #main
-        #sidebar
-        #content (markdown|html)
+      <title>{{ meta.title }}</title>
+      <meta name="description" content="{{ meta.description }}">
 
-   #footer
+      <link rel="shortcut icon" href="{{ media_url('img/favicon.ico') }}" type="image/x-icon" />
 
-   script
--#}
+      {# 64x64 for retina displays -#}
+      <link rel="icon" type="image/png" href="{{ media_url('img/favicon.png') }}" />
 
-{% set meta, node, page, env = resource.meta, resource.node, resource, site.config -%}
+      {# CSS for mobile versions IS provided -#}
+      <meta name="viewport" content="width=device-width">
 
-<!--[if lt IE 8]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+      {% block style0 -%}
+       <link rel="stylesheet" type="text/css" href="{{ media_url('css/index.css') }}"/>
+      {%- endblock %}
 
-<head>
+      {% block style%}{% endblock %}
 
-  {% block head -%}
+      {% block script0 -%}
+         <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+         <script src="{{ media_url('js/top.js') }}"></script>
+      {%- endblock %}
 
-    <meta charset="{{ meta.charset }}">
-
-    {# use chrome frame & force latest IE engine -#}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <title>{{ meta.title }}</title>
-    <meta name="description" content="{{ meta.description }}">
-    <meta name="keywords" content="{{ meta.keywords }}">
-    <meta name="author" content="{{ meta.author }}">
-
-    <link rel="shortcut icon" href="{{ media_url('img/favicon.ico') }}" type="image/x-icon" />
-
-    {# we provide CSS for mobile versions! -#}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    {% block style -%}{%- endblock %}
-
-    {% block head_script -%}
-        <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <script src="{{ media_url('js/top.js') }}"></script>
-    {%- endblock %}
+   </head>
 
 
-  {%- endblock head %}
+   <body id="{{ meta.body_id | default(node.name) }}" class="{{ meta.body_class }}">
 
-</head>
+      {# outside container #}
+      {% block top -%}{%- endblock %}
 
-<body id="{{ meta.body_id | default(node.name) }}" class="{{ meta.body_class }}">
-  {% block body -%}
+      <div id="container">
 
-    {# outside container #}
-    {% markdown -%}{% block top -%}{%- endblock %}{%- endmarkdown %}
-    {% block html_top -%}{%- endblock %}
+         {# ie7 #}
+         <!--[if lt IE 8]>
+           <div id="ie7">{% block ie7 -%}{%- endblock %}</div>
+         <![endif]-->
 
-    <div id="container">
+         {# header #}
+         <header id="header">
+           <div class="wrap">
+             {% block header -%}
 
-      {# ie7 #}
-      <!--[if lt IE 8]>
-        <div id="ie7">
-          {% block ie7 -%}{%- endblock %}
-        </div>
-      <![endif]-->
+               {# header #}
+               <a id="logo" href="/" title="{{ meta.title }}">{% block logo -%}{% endblock -%}</a>
 
-      {# header #}
-      <header id="header">
-        <div id="header-inner">
-          {% block header -%}
-            <a id="branding" href="/">{% block branding -%}{% endblock -%}</a><!--
+               {# nav #}
+               <nav id="nav">{% block nav -%}{%- endblock %}</nav>
 
-            --><nav id="nav">
-              {% markdown -%}{% block nav -%}{%- endblock %}{%- endmarkdown %}
-              {% block html_nav -%}{%- endblock %}
-            </nav><!--
+               {# account #}
+               <nav id="account">{% block account -%}{%- endblock %}</nav>
 
-            --><nav id="subnav">
-              {% markdown -%}{% block subnav -%}{%- endblock %}{%- endmarkdown %}
-              {% block html_subnav -%}{%- endblock %}
-            </nav>
-          {%- endblock %}
-        </div>
-      </header>
+             {%- endblock %}
+           </div>
+         </header>
 
-      {# hero #}
-      <section id="hero">
-        <div id="hero-inner">
-          {% markdown -%}{% block hero -%}{%- endblock %}{%- endmarkdown %}
-          {% block html_hero -%}{%- endblock %}
-        </div>
-      </section>
+         {# main #}
+         <div id="main">
 
-      {# main #}
-      <div id="main">
+            {# subnav #}
+            <nav>{% block subnav -%}{%- endblock %}</nav>
 
-        <div id="main-inner">
+            {# content / markdown #}
+            <article id="content" class="{{ meta.content_class }}">
+               {% markdown -%}{% block markdown -%}{%- endblock %}{%- endmarkdown %}
+               {% block content -%}{%- endblock %}
+            </article>
 
-          {# sidebar #}
-          <aside id="sidebar">
-            {% markdown -%}{% block sidebar -%}{%- endblock %}{%- endmarkdown %}
-            {% block html_sidebar -%}{%- endblock %}
-          </aside><!--
+             {# subcontent #}
+            <footer>{% block subcontent -%}{%- endblock %}</footer>
 
-          {# content #}
-          --><div id="content">
-            {% markdown -%}{% block content -%}{%- endblock %}{%- endmarkdown %}
-            {% block html_content -%}{%- endblock %}
-          </div><!--
+         </div>
 
-          {# sub-content #}
-          --><div id="sub-content">
-            {% markdown -%}{% block sub_content -%}{%- endblock %}{%- endmarkdown %}
-            {% block html_sub_content -%}{%- endblock %}
-          </div>
-
-        </div>
-
+      {# end container #}
       </div>
 
       {# footer #}
       <footer id="footer">
-        <div id="footer-inner">
-          {% markdown -%}{% block footer -%}{%- endblock %}{%- endmarkdown %}
-          {% block html_footer -%}{%- endblock %}
-        </div>
+        <div class="wrap">{% block footer -%}{%- endblock %}</div>
       </footer>
 
-    </div>
+      {% block script1 -%}
+      <script src="{{ env.jquery }}"></script>
+      <script src="{{ media_url('js/bottom.js') }}"></script>
+      {%- endblock %}
 
+      {% block analytics -%}
+         {% if env.analytics %}
+           <script>
+             var _gaq=[['_setAccount','{{ env.analytics }}'],['_trackPageview']];
+             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+             s.parentNode.insertBefore(g,s)}(document,'script'));
+           </script>
+         {% endif %}
+      {%- endblock %}
 
-    {% block script -%}
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      {% block script -%}{%- endblock %}
 
-      <script>
-        window.jQuery || document.write('<script src="{{ media_url('js/lib/jquery.min.js') }}"><\/script>')
-      </script>
-
-      {% if env.analytics %}
-        <script>
-          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-          g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-      {% endif %}
-
-    {%- endblock script %}
-
-{%- endblock body %}
-
-</body>
+   </body>
 
 </html>
+

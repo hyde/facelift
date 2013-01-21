@@ -1,9 +1,25 @@
 
+/*! Normalize */
+
+/*
+   #content
+      @extends .normalized
+*/
+
 normalize()
    a
       text-decoration none
-      hover link_color
       cursor pointer
+      color link_color
+
+      &:hover
+         text-decoration underline
+
+      &:visited
+         color darken(link_color, 10)
+
+      &:active
+         color lighten(link_color, 20)
 
    // *bold* in markdown
    b, em
@@ -17,14 +33,14 @@ normalize()
       background #ff0
 
    p, pre, dd, ol, ul, fieldset, legend
-      margin 0 0 1em
+      margin 0 0 u
       padding 0
 
    li
-      margin u 0
+      margin uh u
 
    ol, ul, blockquote
-      padding-left 1em
+      padding-left u
       margin-left 0
 
    blockquote
@@ -37,7 +53,6 @@ normalize()
       border 0
       border-bottom 1px solid line_color
 
-
    h1
       font-size 250%
 
@@ -47,10 +62,23 @@ normalize()
    h3
       font-size 100%
 
-   h1, h2, h3, p
-      margin 0
+   h1, h2, h3
       line-height 1.2
+      margin 30px 0 5px
+
+   hgroup
+      h1, h2, h3
+         margin 0
+
+   img
+      max-width 100%
+
+   code
+      background-color #e
+      padding 0 4px
+      border-radius 2px
 
 
 if classify
-   normalize()
+   .normalized
+      normalize()
