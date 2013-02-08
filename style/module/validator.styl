@@ -1,41 +1,16 @@
 
-
 validator(prefix = '')
    p = prefix
    position relative
 
-   // placeholder
-   .{p}placeholder
-      absolute 50% u
-      cursor text
-      color gray3
-      white-space nowrap
-      margin 0
-      transition color fast
-
-
    // focus
    &.{p}focus
-      .{p}placeholder
-         color gray4
-
       .{p}title
          display inline
-
-
-   // filled
-   &.{p}filled
-      .{p}placeholder
-         display none
 
    // ok
    &.{p}ok input
       border-color ok_color
-
-   &.{p}ok:after
-      icon C
-      font u2 green
-      absolute top 22% right 3%
 
    // error
    &.{p}error
@@ -59,11 +34,9 @@ validator(prefix = '')
       .{p}error
          color error_color
 
-
    // inline info
    &.{p}inline-info .{p}info
       absolute 20% 250px
-
 
    // progress
    &.{p}progress
@@ -80,13 +53,10 @@ validator(prefix = '')
          cursor wait
          color gray3
 
-
    // hide title
    &.{p}ok, &.{p}error, &.{p}progress
       .{p}title
          display none
-
-
 
 if classify
    label

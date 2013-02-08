@@ -5,6 +5,31 @@ support-for-ie    ?= false
 vendor-prefixes   ?= webkit moz official
 no-wrap = unquote('nowrap')
 
+
+/*
+  Simple and minimalistic linear-gradient
+  Uses grayscale rgba() allowing background-color
+
+  linear-gradient #c
+  linear-gradient #c #f
+  linear-gradient #c #f 100%
+*/
+linear-gradient(topColor = rgba(#0, .15), bottomColor = transparent, stop = 50%)
+  for prefix in moz webkit ms o
+    background-image: '-%s-linear-gradient(top, %s, %s %s)' % (prefix topColor bottomColor stop)
+
+stripe-gradient(topColor = #3, bottomColor = #f, stop = 50%)
+  for prefix in moz webkit ms o
+    background-image: '-%s-linear-gradient(top, %s %s, %s 0)' % (prefix topColor stop bottomColor)
+
+
+radial-gradient(from = #f9, to = darken(from, 10), size = 50%)
+  background from
+  background -moz-radial-gradient(center, from, to) no-repeat to
+  background -webkit-gradient(radial, size size, 0, size size, 500, from(from), to(to)) no-repeat to
+
+
+
 vendor(prop, args, only = null, ignore = null)
   for prefix in vendor-prefixes
     unless (only and !(prefix in only)) or (ignore and prefix in ignore)
@@ -180,22 +205,4 @@ border-radius()
           pos = ()
   vendor('border-radius', pos) unless augmented
 
-
-/*
-  - The most minimal syntax
-  - Uses opacity, background-color can be combined -> modular
-
-  linear-gradient #c
-  linear-gradient #c #f
-  linear-gradient #c #f 100%
-*/
-linear-gradient(topColor = rgba(#0, .15), bottomColor = transparent, stop = 50%)
-  for prefix in moz webkit ms o
-    background-image: '-%s-linear-gradient(top, %s, %s %s)' % (prefix topColor bottomColor stop)
-
-
-radial-gradient(from = #f9, to = darken(from, 10), size = 50%)
-  background from
-  background -moz-radial-gradient(center, from, to) no-repeat to
-  background -webkit-gradient(radial, size size, 0, size size, 500, from(from), to(to)) no-repeat to
 

@@ -1,17 +1,22 @@
 
-.badge
+
+badge(color = #9)
    font 100%/1 bold #f
    font-style normal
    display inline-block
    padding 2px 4px
-   background-color #9
+   background-color color
    text-shadow 0 -1px 0 rgba(#0, .25)
    border-radius 3px
 
-.important
-   @extends .badge
-   background-color red
+if classify
+   .badge
+      badge #9
 
-.info
-   @extends .badge
-   background-color blue
+   .important
+      @extends .badge
+      background-color red
+
+   .info
+      @extends .badge
+      background-color blue
