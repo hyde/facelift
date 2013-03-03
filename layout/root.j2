@@ -19,16 +19,16 @@
       <title>{{ meta.title }}</title>
       <meta name="description" content="{{ meta.description }}">
 
-      <link rel="shortcut icon" href="{{ media_url('img/favicon.ico') }}" type="image/x-icon" />
+      <link rel="shortcut icon" href="/media/img/favicon.ico" type="image/x-icon" />
 
       {# 64x64 for retina displays -#}
-      <link rel="icon" type="image/png" href="{{ media_url('img/favicon.png') }}" />
+      <link rel="icon" type="image/png" href="/media/img/favicon.png" />
 
       {# CSS for mobile versions IS provided -#}
       <meta name="viewport" content="width=device-width">
 
       {% block style0 -%}
-       <link rel="stylesheet" type="text/css" href="{{ media_url('css/index.css') }}"/>
+       <link rel="stylesheet" type="text/css" href="/media/css/index.css"/>
       {%- endblock %}
 
       {% block style%}{% endblock %}
@@ -58,7 +58,7 @@
              {% block header -%}
 
                {# header #}
-               <a id="logo" href="/" title="{{ meta.title }}">{% block logo -%}{% endblock -%}</a>
+               <nav id="logo">{% block logo -%}{% endblock -%}</nav>
 
                {# nav #}
                <nav id="nav">{% block nav -%}{%- endblock %}</nav>
@@ -97,7 +97,7 @@
 
       {% block script1 -%}
       <script src="{{ env.jquery }}"></script>
-      <script src="{{ media_url('js/bottom.js') }}"></script>
+      <script src="/media/js/site.js"></script>
       {%- endblock %}
 
       {% block analytics -%}

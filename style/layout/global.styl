@@ -45,8 +45,8 @@ body
    text-align center
    clearfix true
    background dark
-   font-size 90%
-   line-height 35px
+   font-size 12px
+   line-height 40px
 
    nav
       display inline-block
@@ -55,13 +55,16 @@ body
       color #c
       margin 0 u
       text-decoration none
-      transition color fast
+      transition all fast
+      text-shadow 0 0 0
 
       &:hover
          color #f
+         text-shadow 0 0 5px #f
 
       &:active
          color #9
+         text-shadow 0 0 0
 
    #account
       float right
@@ -82,6 +85,9 @@ body
 
 .normalized#content
    padding-bottom 100px
+
+   code
+      background-color #eef
 
 
 // main footer

@@ -16,6 +16,7 @@ inputs()
       border-radius uh
       padding u
       border 1px solid gray4
+      -webkit-appearance none
 
       if shadow-input
          box-shadow inset 0 0 2px rgba(black, .2)
@@ -42,29 +43,6 @@ inputs()
       resize none
       overflow hidden
       transition height fast
-
-   label
-      margin 0 0 u
-      display inline-block
-      cursor pointer
-
-      span
-         display block
-         font-size 90%
-         color #c
-
-   // fieldset groups inputs side by side
-   fieldset
-      border 0
-
-      label
-         display inline-block
-         padding-right u
-         margin u 0
-
-   legend
-      font-size large
-
 
    // hide number spinners
    [type=number]
